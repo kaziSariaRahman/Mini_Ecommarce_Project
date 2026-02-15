@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container{
+    max-width: 900px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1f2937;
+}
+
+h2{
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #111827;
+}
+
+/* PRODUCTS */
+.products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product{
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.25s ease;
+}
+
+.product:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+.product h2{
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #111827;
+}
+
+.product p{
+    font-size: 18px;
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 20px;
+}
+
+/* BUTTONS */
+button{
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+button:hover{
+    background: #1d4ed8;
+}
+
+/* CART */
+.cart{
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 25px;
+}
+
+.cart ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 15px;
+    color: #111827;
+}
+
+.cart ul li:last-child{
+    border-bottom: none;
+}
+
+.cart ul li button{
+    background: #ef4444;
+    padding: 6px 14px;
+    font-size: 13px;
+}
+
+.cart ul li button:hover{
+    background: #dc2626;
+}
+
+#totalprice{
+    font-weight: 700;
+    color: #111827;
+}
+
+/* BUY NOW */
+#buynow{
+    width: 100%;
+    margin-top: 20px;
+    background: #111827;
+    padding: 14px;
+    font-size: 15px;
+}
+
+#buynow:hover{
+    background: #000000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+    .products{
+        grid-template-columns: 1fr;
+    }
+}
