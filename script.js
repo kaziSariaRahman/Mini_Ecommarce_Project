@@ -4,6 +4,7 @@ let totalPrice = parseFloat(localStorage.getItem('totalPrice')) || 0;
 const addToCartButtons = document.querySelectorAll('.add-to-cart'); 
 const cartitems = document.getElementById('cart-items');
 const totalPriceEl = document.getElementById('totalprice');
+const buynoww=document.getElementById('buynow')
 
 addToCartButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -61,3 +62,18 @@ function removeItem(index) {
 
 
 updateCartDisplay();
+function buynow(){
+    let button = document.getElementById('buy');
+    button.innerText = "Purchased";
+    alert("You have done your purchase");
+
+    localStorage.removeItem('cart');
+    localStorage.removeItem('totalPrice');
+
+    document.getElementById("cartItems").innerHTML = "";
+    document.getElementById("total").innerText = "0";
+
+    document.getElementById('buy').innerText = "Buy Now";
+}
+
+
